@@ -1,0 +1,204 @@
+.more {
+  &__info {
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 48px);
+    display: block;
+    border-radius: 1em;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    &__pencil {
+      position: absolute;
+      right: emCal(16, 12);
+      top: emCal(16, 12);
+      background: rgba($color: #ddd, $alpha: 0);
+      font-size: 24px;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      svg {
+        transform: translateY(-2px);
+      }
+      transition: all 0.2s;
+      cursor: pointer;
+      &:hover {
+        background: rgba($color: #ddd, $alpha: 0.3);
+      }
+      &__container {
+        position: relative;
+        width: 100%;
+      }
+    }
+    &__avatar {
+      background: $gradient;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      @include typo($fsz: emCal(16, 32), $fw: 700);
+      border-radius: 50%;
+      margin: auto;
+    }
+    &__name {
+      @include typo($fsz: emCal(16, 24), $fw: 600);
+    }
+    &__email {
+      @include typo($fsz: emCal(16, 14), $fw: 300);
+      opacity: 0.9;
+    }
+    &__plan {
+      &__date {
+        @include typo($fsz: emCal(16, 17), $fw: 600);
+      }
+    }
+    .auth__form {
+      margin: emCal(16, 0) !important;
+      padding: 0 0 0 0 !important;
+    }
+  }
+  &__menu {
+    text-align: left;
+    max-width: 380px;
+    margin: auto;
+    @include mq(xs) {
+      margin: 0 1em;
+    }
+    &__item {
+      border-bottom: 0.1px solid
+        rgba($color: setShadeColor(border), $alpha: 0.3);
+      border-width: 0.01em !important;
+      padding: 1em 0 1.5em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover {
+        color: setColor(pink);
+        span {
+          color: setColor(pink);
+        }
+      }
+      svg {
+        transform: translateY(6px);
+      }
+      & > svg {
+        transform: translateY(7px);
+      }
+      span {
+        @include typo($fsz: emCal(16, 16), $lh: 0);
+        svg {
+          width: 22px;
+          height: auto;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: emCal(16, 76);
+    margin: 0 auto;
+    max-width: 380px;
+    @include mq(xs) {
+      margin: 0 1em;
+    }
+    &__tooltip {
+      background-image: $gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent !important;
+      @include typo($fw: 600);
+      height: 20px;
+    }
+    &__item {
+      color: setColor(light) !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      transition: all 0.2s;
+      cursor: pointer;
+      &:hover {
+        background: rgba($color: #ddd, $alpha: 0.3);
+      }
+    }
+  }
+  &__logout {
+    .ant-modal-confirm-title {
+      @include typo($fsz: emCal(16, 18), $fw: 600);
+    }
+    .ant-modal-confirm-btns {
+      width: 100%;
+      float: none;
+      display: flex;
+      justify-content: space-between;
+      .ant-btn {
+        width: 48%;
+        height: emCal(16, 40);
+        border-radius: emCal(16, 20);
+        @include typo($fw: 600);
+        &-primary {
+          border: 0;
+          background: $gradient;
+        }
+      }
+    }
+  }
+  &__edit {
+    &__avatar-bg {
+      background: transparent;
+      width: emCal(16, 86);
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3px;
+      border-radius: 50%;
+      cursor: pointer;
+      &:hover {
+        background: $gradient;
+        .more__info__avatar {
+          border: 3px setColor(light) solid;
+        }
+      }
+      &.--selected {
+        background: $gradient;
+        .more__info__avatar {
+          border: 3px setColor(light) solid;
+        }
+      }
+    }
+    &__btns {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .ant-btn {
+        width: 48%;
+        margin: 0 0 !important;
+        text-transform: uppercase;
+      }
+    }
+    .auth__form {
+      margin: 0 !important;
+    }
+  }
+  &__container {
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 48px);
+    background: url("/assets/images/more-bj.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

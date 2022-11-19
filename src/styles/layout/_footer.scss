@@ -1,0 +1,29 @@
+// Footer
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 48px;
+  z-index: 1;
+  svg {
+    transform: translateY(2px);
+  }
+  &__element {
+    @include typo($fsz: emCal(16, 13), $fw: 300);
+    &:not(:last-child)::after {
+      content: "|";
+      margin: 0 emCal(16, 10);
+      color: setColor(light);
+    }
+    &.--link {
+      color: setColor(light);
+      &:hover {
+        color: setColor(pink);
+      }
+      transition: all 0.2s;
+      display: block;
+    }
+    margin-bottom: emCal(16, 16);
+  }
+}

@@ -1,0 +1,35 @@
+.payment-modal {
+  max-width: 480px !important;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: emCal(16, 8) emCal(16, 0);
+    .plan-card__modal__item__value {
+      img {
+        max-width: 240px;
+      }
+    }
+  }
+  &__qr {
+    flex-direction: column;
+    width: 100%;
+    .plan-card__modal__item__title {
+      width: 100%;
+      text-align: left;
+      margin-right: 0 !important;
+    }
+    .plan-card__modal__item__value {
+      align-self: center;
+    }
+  }
+  &__warning {
+    background: rgba($color: #fa8c16, $alpha: 0.95);
+    display: flex;
+    align-items: center;
+    &__icon {
+      svg {
+        font-size: 24px;
+      }
+    }
+  }
+}

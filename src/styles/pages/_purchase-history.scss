@@ -1,0 +1,17 @@
+.purchase {
+  img {
+    max-width: 100%;
+  }
+  &__item {
+    border-bottom: 0.01em solid rgba($color: #333, $alpha: 0.3);
+    &__el {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        @include typo($color: setColor(pink), $fw: 500);
+        opacity: 0.9;
+      }
+    }
+  }
+}

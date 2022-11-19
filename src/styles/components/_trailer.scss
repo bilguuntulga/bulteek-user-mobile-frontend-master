@@ -1,0 +1,14 @@
+.trailer__modal {
+  width: 100% !important;
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
+  .ant-modal-content {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .ant-modal-mask {
+      background-color: rgba(34, 35, 35, 0.82);
+  }
+}

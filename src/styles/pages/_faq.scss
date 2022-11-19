@@ -1,0 +1,11 @@
+.faq {
+  &__container {
+    background: setShadeColor(purple);
+    position: relative;
+    .faq-slide {
+    }
+  }
+}
+.bg-purple {
+  background: setShadeColor(purple);
+}

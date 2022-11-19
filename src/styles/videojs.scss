@@ -1,0 +1,72 @@
+.video-js.vjs-layout-x-small:not(.vjs-liveui) .vjs-subs-caps-button,
+.video-js.vjs-layout-x-small:not(.vjs-live) .vjs-subs-caps-button,
+.video-js.vjs-layout-tiny .vjs-subs-caps-button {
+  display: block !important;
+}
+.video-js.vjs-layout-x-small .vjs-current-time {
+  display: block !important;
+}
+.video-js .vjs-current-time {
+  display: block !important;
+  position: absolute;
+  top: 1.5em;
+  height: 1.5em !important;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+.vjs-remaining-time.vjs-time-control.vjs-control {
+  display: block !important;
+  position: absolute;
+  top: 1.5em;
+  right: 0;
+  height: 1.5em !important;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+.vjs-picture-in-picture-control.vjs-control.vjs-button {
+  display: none !important;
+}
+.vjs-subs-caps-button.vjs-menu-button.vjs-menu-button-popup.vjs-control.vjs-button {
+  margin-left: calc(100% - 20em);
+}
+.video-js.vjs-layout-small .vjs-current-time {
+  display: block !important;
+}
+.video-js .vjs-text-track-display,
+.video-js .vjs-text-track-display div {
+  font-family: "CeraPro Medium", sans-serif !important;
+}
+// .vjs-text-track-display div {
+//   font-size: 1.2em;
+// }
+
+.vjs {
+  &-control {
+    &-bar {
+      height: 6em !important;
+      align-items: flex-end;
+      background-color: transparent !important;
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.8)
+      );
+      .vjs-control {
+        height: 3em;
+      }
+    }
+  }
+  // .vjs-current-time.vjs-time-control.vjs-control {
+  //   display: block !important;
+  // }
+  // .vjs-current-time.vjs-time-control.vjs-control {
+  //   display: block !important;
+  // }
+
+  &-progress-control {
+    position: absolute !important;
+    top: 1.5em;
+    left: 3em;
+    width: calc(100% - 6em) !important;
+    height: 1.5em !important;
+  }
+}

@@ -1,0 +1,11 @@
+.plan-slide {
+  &__title {
+    @include typo($fsz: emCal(16, 32), $fw: 600);
+    letter-spacing: 1px;
+  }
+  &__desc {
+    @include typo($fsz: emCal(16, 17), $lh: 1.5);
+    max-width: 70%;
+    margin: auto;
+  }
+}

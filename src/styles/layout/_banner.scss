@@ -1,0 +1,131 @@
+.banner {
+  &__wrapper {
+    position: relative;
+    width: 100%;
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    &__wrapper {
+      position: absolute;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      padding-top: calc(16 / 12 * 100%);
+      @include mq(sm) {
+        padding-top: calc(16 / 9 * 100%);
+      }
+    }
+  }
+  &__shadow {
+    position: relative;
+    width: 100%;
+    height: 0;
+    z-index: -1;
+    overflow: hidden;
+    transition: opacity 0.2s linear;
+    background-color: #161616;
+    padding-top: calc(16 / 12 * 100%);
+    @include mq(sm) {
+      padding-top: calc(16 / 9 * 100%);
+    }
+    &__bottom {
+      background: linear-gradient(360deg, #141414 0%, rgba(22, 22, 22, 0) 100%);
+      height: calc(100vw / 1.6);
+      @include mq(sm) {
+        height: calc(100vw / 1.1);
+      }
+      position: absolute;
+      bottom: -10px;
+      width: 100%;
+    }
+    &__wrapper {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  &__content {
+    &__wrapper {
+    }
+    &__logo {
+      display: flex;
+      justify-content: center;
+      max-width: 100%;
+      padding-top: calc(16 / 12 * 60%);
+      @include mq(sm) {
+        padding-top: calc(16 / 9 * 60%);
+      }
+      &__img {
+        max-width: 80%;
+
+        max-height: auto;
+        position: relative;
+        z-index: 100;
+      }
+    }
+    &__control {
+      display: flex;
+      padding: 1em 1.4em;
+      @include mq(xs) {
+        padding: 1em 0;
+      }
+      justify-content: space-between;
+      align-items: center;
+      .ant-btn {
+        margin: 0 10px;
+        svg {
+          transform: translateY(1px);
+        }
+
+        height: emCal(16, 40);
+      }
+      .ant-btn-primary {
+        background: $gradient;
+        border: 0;
+        @include mq(xs) {
+          @include typo($fw: 600, $fsz: emCal(16, 20));
+          text-transform: capitalize;
+          padding: 0 20px;
+          border-radius: 5px;
+          svg {
+            font-size: 1em;
+            margin-right: 10px;
+            transform: translateY(2px);
+          }
+        }
+        @include typo($fw: 700, $fsz: emCal(16, 25), $up: true);
+        padding: 0 30px;
+        span {
+          transform: translateY(-2px);
+        }
+
+        svg {
+          font-size: 1.1em;
+          margin-right: 5px;
+        }
+      }
+      .ant-btn-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: emCal(16, 70);
+        svg {
+          font-size: emCal(16, 45);
+        }
+        @include mq(xs) {
+          height: emCal(16, 60);
+          svg {
+            font-size: emCal(16, 40);
+          }
+        }
+      }
+    }
+  }
+}

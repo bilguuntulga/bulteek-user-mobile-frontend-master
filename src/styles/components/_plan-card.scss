@@ -1,0 +1,109 @@
+.plan-card {
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+  -webkit-box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%);
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: rgba($color: #000, $alpha: 0.3);
+  z-index: -10;
+  &:hover {
+    transform: translateY(-16px) scale(1.05);
+    .plan-card__price {
+      &__number,
+      span {
+        background-image: $gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent !important;
+      }
+    }
+  }
+  &__title {
+    padding: emCal(16, 16) 20vw;
+    white-space: nowrap;
+    @include typo($fsz: remCal(16), $up: true, $fw: 600);
+
+    text-align: center;
+    background: $gradient;
+  }
+  &__logo {
+    padding: emCal(16, 60) 0;
+    @include mq(xxs) {
+      padding: emCal(16, 40) 0;
+    }
+    margin: auto;
+    svg {
+      height: 4em;
+      width: auto;
+    }
+  }
+  &__price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    @include typo($fsz: emCal(16, 16), $fw: 500);
+    &__number {
+      @include typo($fsz: emCal(16, 25), $fw: 500);
+      margin-right: 5px;
+      transition: inherit;
+    }
+    -webkit-transition: color 0.2s ease 0s;
+    transition: color 0.2s ease 0s;
+  }
+  &__btn {
+    cursor: pointer;
+    width: 60%;
+    margin: auto;
+    height: 40px;
+    border-radius: 20px;
+    background: $gradient;
+    border: 0;
+    span {
+      @include typo($fsz: remCal(16), $fw: 500, $up: true);
+      letter-spacing: 1px;
+    }
+  }
+  &__modal {
+    max-width: 100% !important;
+    .ant-modal-body {
+      padding: 8px;
+    }
+    &__title {
+      @include typo($fsz: emCal(16, 20), $fw: 600, $color: transparent);
+      display: inline-block;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-image: $gradient;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      &__title {
+        @include typo($fsz: emCal(16, 16), $fw: 500, $lh: 3);
+      }
+      &__value {
+        @include typo($fsz: emCal(16, 16), $fw: 500, $up: true);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .ant-btn-circle {
+          border: 0;
+        }
+        & > span {
+          margin-right: 5px;
+          @include typo($fsz: emCal(16, 13), $fw: 500, $up: false);
+          text-transform: lowercase;
+          background-color: setShadeColor(medium);
+        }
+      }
+    }
+    &__btn {
+      width: 100%;
+      height: 43px;
+    }
+  }
+}

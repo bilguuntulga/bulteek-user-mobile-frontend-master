@@ -1,0 +1,12 @@
+.category {
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    .ant-col {
+      overflow: hidden;
+    }
+  }
+  &__container {
+    width: 100%;
+  }
+}

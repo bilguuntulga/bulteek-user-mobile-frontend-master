@@ -1,0 +1,29 @@
+.payment {
+  .ant-descriptions-header {
+    margin-bottom: 16px;
+  }
+  .ant-descriptions-title {
+    @include typo($fsz: emCal(16, 20), $fw: 600);
+    display: inline-block;
+  }
+  .ant-descriptions-item {
+    padding-bottom: 16px;
+    &-content {
+      font-size: 16px;
+      font-family: getFontWeight(600);
+      text-transform: uppercase;
+    }
+  }
+  &__bank {
+    &__image {
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: emCal(16, 20);
+      }
+    }
+    &__title {
+      font-family: getFontWeight(600);
+    }
+  }
+}

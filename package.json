@@ -1,0 +1,74 @@
+{
+  "name": "bulteek-mobile-2.0.0",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^6.3.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@videojs/themes": "^1.0.1",
+    "antd": "^4.16.13",
+    "classnames": "^2.3.1",
+    "craco-alias": "^3.0.1",
+    "craco-less": "^1.20.0",
+    "dotenv": "^8.2.0",
+    "formik": "^2.2.9",
+    "formik-antd": "^2.0.1",
+    "http-proxy-middleware": "^2.0.1",
+    "less": "^4.1.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "numeral": "^2.0.6",
+    "parse-srt": "^1.0.0-alpha",
+    "prop-types": "^15.7.2",
+    "qs": "^6.7.0",
+    "react": "^17.0.2",
+    "react-copy-to-clipboard": "^5.0.4",
+    "react-device-detect": "^2.1.2",
+    "react-dom": "^17.0.2",
+    "react-facebook-login": "^4.1.1",
+    "react-icons": "^4.2.0",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "redux": "^4.1.1",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.39.2",
+    "swiper": "^6.8.4",
+    "video.js": "^7.15.4",
+    "videojs-contrib-quality-levels": "^2.1.0",
+    "videojs-hls-quality-selector": "^1.1.4",
+    "videojs-mobile-ui": "^0.6.1",
+    "videojs-youtube": "^2.6.1",
+    "web-vitals": "^1.0.1",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "dev": "craco start",
+    "start": "serve -s build -l 3001",
+    "build": "GENERATE_SOURCEMAP=false craco build",
+    "build:win": "set \"GENERATE_SOURCEMAP=false\" && craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

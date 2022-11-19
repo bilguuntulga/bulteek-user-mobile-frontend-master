@@ -1,0 +1,28 @@
+.ant-drawer {
+  &-body {
+    padding: 0;
+    background: setShadeColor(dark);
+  }
+  &-content {
+    border-radius: emCal(16, 16) emCal(16, 16) 0 0;
+    &-wrapper {
+      height: 60vh !important;
+      @include mq(xs) {
+        height: 75vh !important;
+      }
+      max-width: 100%;
+    }
+  }
+  &-close {
+    color: setColor(light) !important;
+    svg {
+      height: 28px;
+      width: 28px;
+      padding: 4px;
+      background-color: rgba($color: setShadeColor(dark), $alpha: 0.45);
+      border-radius: 50%;
+      // transform: translate(-5px, 10px);
+      transition: 0.3s all;
+    }
+  }
+}

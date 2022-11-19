@@ -1,0 +1,12 @@
+.plan-page {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  .plan-slide {
+    width: 100% !important;
+    padding: 0 1em;
+    &__title {
+      max-width: 90%;
+    }
+  }
+}

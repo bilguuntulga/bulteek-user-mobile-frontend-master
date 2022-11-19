@@ -1,0 +1,13 @@
+.header-back-spacer {
+  @media (min-width: 1600px) {
+    min-width: 5vw !important;
+  }
+  display: block;
+  min-width: 80px;
+  max-width: 120px !important;
+  &__container {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+}

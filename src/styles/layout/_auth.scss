@@ -1,0 +1,177 @@
+.auth {
+  background-color: rgba($color: setShadeColor(darker), $alpha: 0.95);
+  display: block;
+  width: 100%;
+  height: 100vh;
+  color: setColor(light) !important;
+  &__container {
+    &__image {
+      opacity: 0.6;
+      z-index: -1;
+      right: -100px !important;
+      bottom: -100px !important;
+      min-height: calc(100vh + 120px) !important;
+      min-width: calc(100vw + 120px);
+      -webkit-transform: scale(1) translate(-100px, -100px);
+      transform: scale(1) translate(-100px, -100px);
+      -webkit-transition: -webkit-transform 14000ms linear;
+      transition: -webkit-transform 14000ms linear;
+      transition: transform 14000ms linear;
+      transition: transform 14000ms linear, -webkit-transform 14000ms linear;
+    }
+  }
+  &__logo {
+    width: 50%;
+    margin: 0 auto;
+    padding: emCal(16, 50) emCal(16, 16) emCal(16, 40) 0;
+    @include mq(xxs) {
+      padding: emCal(16, 30) emCal(16, 16) emCal(16, 20) 0;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  &__title {
+    @include typo($fsz: emCal(16, 24), $fw: 600);
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  &__form,
+  &__other,
+  .ant-divider {
+    padding: 0 5vw;
+  }
+  &__form {
+    .ant-form-item {
+      margin-bottom: 0px;
+    }
+
+    margin: 0 auto;
+    .ant-input-affix-wrapper {
+      padding: 13px 10px 13px 14px;
+      border: 0;
+      border-radius: 0;
+      &:focus {
+        background-color: #3d3d3d;
+      }
+      .ant-input {
+        @include typo($fsz: remCal(15));
+      }
+      @include typo($fsz: emCal(16, 18), $color: setShadeColor(lighter));
+      margin-bottom: remCal(17);
+    }
+    &__forget {
+      @include link(
+        $fsz: remCal(15),
+        $underline: true,
+        $color: setShadeColor(lighter),
+        $lh: 0.5,
+        $fw: 500
+      );
+      display: block;
+      text-align: left;
+      text-decoration: underline;
+    }
+    &__remember {
+      margin: remCal(34) 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        color: inherit;
+      }
+      @include typo($fsz: remCal(15), $color: setShadeColor(lighter), $fw: 500);
+      text-align: left;
+      .ant-switch {
+        line-height: 24px;
+        height: 24px;
+        min-width: 40px;
+        .ant-switch-handle {
+          width: 24px;
+          height: 24px;
+          top: 0;
+          left: 0;
+          &::before {
+            border-radius: 12px;
+          }
+        }
+      }
+      .ant-switch-checked .ant-switch-handle {
+        left: calc(100% - 24px) !important;
+      }
+      .ant-switch-checked {
+        background: $gradient;
+      }
+    }
+    &__button {
+      width: 100%;
+      height: 46px;
+      @include mq(xxs) {
+        height: 40px;
+      }
+      border-radius: 23px;
+      &.--login {
+        span {
+          @include typo($fsz: remCal(16), $fw: 500, $up: true);
+          letter-spacing: 1px;
+        }
+        background: $gradient;
+        border: 0;
+      }
+      &.--social {
+        padding: 0 0;
+        position: relative;
+        border: 1.5px solid setShadeColor(light);
+        img {
+          max-height: 24px;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translate(80%, -50%);
+        }
+        span {
+          margin-left: 24px;
+          @include typo($fsz: remCal(15), $fw: 600, $up: false);
+        }
+        &:hover {
+          transform: scale(1.02);
+          border: 2px solid setShadeColor(lighter);
+        }
+        &.-center {
+          span {
+            margin-left: 0
+          }
+        }
+      }
+    }
+  }
+  .ant-divider {
+    &-inner-text {
+      @include typo($up: true);
+    }
+  }
+  &__other {
+    &__signup {
+      &__qs {
+        @include typo(
+          $fsz: remCal(15),
+          $color: setShadeColor(lighter),
+          $fw: 500
+        );
+      }
+
+      &__link {
+        @include link(
+          $fsz: remCal(15),
+          $underline: true,
+          $color: setColor(light),
+          $lh: 0.5,
+          $fw: 600,
+          $up: true
+        );
+        margin-left: 3px;
+        text-decoration: underline;
+      }
+    }
+  }
+}

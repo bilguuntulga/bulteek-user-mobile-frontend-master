@@ -1,0 +1,34 @@
+.loading {
+  &.cover-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.cover-page {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    width: 10vw;
+    max-width: emCal(16, 150);
+    min-width: emCal(16, 110);
+  }
+  svg {
+    font-size: emCal(16, 35);
+    color: setColor(pink);
+  }
+  &__text {
+    width: 10vw;
+    min-width: emCal(16, 150);
+    @include typo($fsz: emCal(16, 18), $fw: 600);
+    @include mq(md) {
+      @include typo($fsz: emCal(16, 14), $fw: 600);
+    }
+  }
+}

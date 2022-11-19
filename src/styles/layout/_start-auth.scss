@@ -1,0 +1,48 @@
+.start-auth {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 emCal(16, 20);
+  &__logo {
+    width: 100%;
+    text-align: left;
+    img {
+      max-width: 40%;
+      height: auto;
+    }
+  }
+  &__btns {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 6vh;
+    &-fb {
+      background-color: #335b96;
+    }
+    &-login {
+      background-color: setColor(light);
+      color: setShadeColor(darker) !important;
+    }
+    &__qs {
+      @include typo($fw: 500);
+      margin-bottom: emCal(16, 10);
+    }
+    .ant-btn {
+      width: 100%;
+      height: 45px;
+      border-radius: 24px;
+      border: 0;
+      margin-bottom: emCal(16, 16);
+
+      @include typo($fw: 600);
+      &-primary {
+        background: $gradient;
+      }
+    }
+  }
+}

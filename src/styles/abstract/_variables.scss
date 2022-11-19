@@ -1,0 +1,68 @@
+$root-color: (
+  pink: #fc2567,
+  purple: #991eeb,
+  light: #eaeff4,
+);
+
+$colors: (
+  pink: var(--pink-color),
+  purple: var(--purple-color),
+  light: var(--light-color),
+);
+$gradient: linear-gradient(
+  129deg,
+  rgba(153, 30, 235, 1) 0%,
+  rgba(248, 0, 105, 1) 100%
+) !important;
+
+$shades: (
+  darker: #121212,
+  dark: #141414,
+  medium: #242424,
+  regular: #2b2b2b,
+  light: #353535,
+  lighter: #9f9f9f,
+  border: #f5f5f5,
+  purple: #02021c,
+);
+
+$rem-baseline: 16;
+$transition: 0.2s ease-in-out;
+$prefixes: (webkit, moz, ms, o);
+
+$container: 1170px;
+$container-fluid: 1800px;
+$section-spacing: remCal(60);
+
+$breakpoint: (
+  xxs: 320px,
+  xs: "376px",
+  sm: "500px",
+  md: "800px",
+  lg: "1100px",
+  xl: "1400px",
+  xxl: "1600px",
+);
+
+$font-weight: (
+  300: "CeraPro Light",
+  400: "CeraPro Regular",
+  500: "CeraPro Medium",
+  600: "CeraPro Bold",
+  700: "CeraPro Black",
+);
+$spacers: (
+  0: 0,
+  1: remCal(4),
+  2: remCal(8),
+  3: remCal(16),
+  4: remCal(24),
+  5: remCal(48),
+  6: remCal(36),
+);
+$sides: (
+  t: "top",
+  r: "right",
+  b: "bottom",
+  l: "left",
+);

@@ -1,0 +1,22 @@
+@each $name, $value in $spacers {
+  @each $abbr, $pref in $sides {
+    .m#{$abbr}-#{$name} {
+      margin-#{$pref}: #{$value} !important;
+    }
+    .p#{$abbr}-#{$name} {
+      padding-#{$pref}: #{$value} !important;
+    }
+  }
+  .m-#{$name} {
+    margin: $value;
+  }
+  .p-#{$name} {
+    padding: $value;
+  }
+}
+.pb-60 {
+  padding-bottom: $section-spacing;
+}
+.pb-48 {
+  padding-bottom: 48px;
+}

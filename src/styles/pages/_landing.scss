@@ -1,0 +1,64 @@
+.landing {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  &__container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    &__image {
+      @include absolute();
+      object-fit: cover;
+      width: 100%;
+      opacity: 0.6;
+      height: 100%;
+    }
+  }
+  .swiper-slide-active .auth__container .auth__container__image {
+    -webkit-transform: scale(1.1) translate(0, 0);
+    transform: scale(1.1) translate(0, 0);
+  }
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: -webkit-box;
+    color: setColor(light);
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .swiper-pagination {
+    right: 20px !important;
+    top: 80% !important;
+  }
+  &__bullet {
+    width: 3px !important;
+    height: 20px !important;
+    border-radius: 3px !important;
+    background: setColor(light) !important;
+    opacity: 0.6 !important;
+    transition: height 300ms, color 500ms, opacity 450ms !important;
+    &:hover {
+      opacity: 1 !important;
+    }
+    &.swiper-pagination-bullet-active {
+      opacity: 1 !important;
+      height: 40px !important;
+      background: $gradient;
+    }
+  }
+}

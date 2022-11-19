@@ -1,0 +1,102 @@
+.movie-modal__episodes {
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    &__header {
+      @include typo($fsz: emCal(16, 26), $fw: 600);
+    }
+    &__s1 {
+      @include typo($fsz: emCal(16, 20), $fw: 500);
+    }
+    .ant-select {
+      width: emCal(16, 220);
+      min-width: 4em !important;
+      cursor: pointer;
+      border-radius: 0.2em;
+      height: 42px;
+      &-selector {
+        background-color: rgb(36, 36, 36) !important;
+      }
+      &-selection {
+        &-search {
+          color: setColor(light);
+        }
+        &-item {
+          padding: 0 1em !important;
+          @include typo($fsz: remCal(22), $cpt: false, $fw: 500);
+          text-transform: lowercase;
+        }
+      }
+      &-arrow {
+        color: setColor(light);
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  &__episode {
+    border-bottom: 1px solid rgba($color: setShadeColor(border), $alpha: 0.2);
+    padding: 16px;
+    border-radius: 0.25em;
+
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background: #333333;
+      .play-icon {
+        opacity: 1 !important;
+      }
+    }
+    &__image-wrapper {
+      overflow: hidden;
+      border-radius: 4px;
+      box-sizing: border-box;
+      display: block;
+      max-width: 20%;
+      cursor: pointer;
+      .play-btn-holder {
+        max-width: 100%;
+        position: relative;
+        .play-icon {
+          background-color: rgba(42, 42, 42, 0.6);
+          border-color: white;
+          position: absolute;
+          height: 60px;
+          width: 60px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          svg {
+            transform: translate(1.5px, 1.5px);
+          }
+          &:hover {
+            color: setColor(light);
+          }
+        }
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+    &__title {
+      min-height: 100%;
+      flex: 0 0 70%;
+      padding: 1em;
+      padding-bottom: 0.5em;
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+      font-size: 1em;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.faq-slide {
+  &__container {
+    background: setShadeColor(purple);
+  }
+  &__title {
+    @include typo($fsz: emCal(16, 32), $fw: 500, $lh: 1.2);
+  }
+  .ant-collapse-borderless {
+    background-color: transparent;
+    border: 0;
+    & > .ant-collapse-item {
+      border-bottom: 0;
+    }
+  }
+  .ant-collapse-header {
+    border-bottom: 1px solid rgba($color: setShadeColor(border), $alpha: 0.3);
+    text-align: left;
+    @include typo(
+      $fsz: emCal(16, 15),
+      $fw: 300,
+      $color: setColor(#9e86ff) !important
+    );
+    padding: emCal(16, 14) 0 !important;
+  }
+  .ant-collapse-content-box {
+    padding: emCal(16, 8) 0 0 !important;
+    text-align: left;
+    @include typo($fsz: emCal(16, 14), $fw: 300, $lh: 2);
+    p {
+      padding: 0 !important;
+      margin-block-start: 0 !important;
+      margin-block-end: 0 !important;
+      text-align: left;
+    }
+  }
+}
